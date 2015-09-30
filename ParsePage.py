@@ -12,7 +12,7 @@ class RootPage:
         content = urllib2.urlopen(page_url)
         html = content.read()
         content = html.decode('gbk', 'ignore')
-        print(html)
+        # print(html)
         content = re.sub('&nbsp;', ' ', content)
         content = re.sub('\n', ' ', content)
 
@@ -23,6 +23,11 @@ class RootPage:
         # pattern = re.compile('item?line?')
         # get all the link in the root page <1>
         # link_pool = self.soup.select('a[href]')
+        temp = self.soup.select('div[class="item4line1"]')
+        for i in temp:
+            print(i.prettify('gbk'))
+        return
+
         link_pool = self.soup.find_all('a')
         href_container = []
         pattern = re.compile(r'.*item\.taobao\.com.*')
@@ -35,7 +40,7 @@ class RootPage:
 
 
 if __name__ == '__main__':
-    page_url = "http://chengxinshudian88.taobao.com/search.htm?q=%BD%F0%C8%FD%C1%B7&searcy_type=item&s_from=newHeader&source=&ssid=s5-e&search=y&spm=a1z10.1.1996643285.d4916905&initiative_id=shopz_20150725"
+    page_url = "https://chengxinshudian88.taobao.com/search.htm?q=%CE%E5%C4%EA%B8%DF%BF%BC&searcy_type=item&s_from=newHeader&source=&ssid=s5-e&search=y&spm=a1z10.1.1996643285.d4916905&initiative_id=shopz_20150801"
     # page_url = "index.html"
     instance = RootPage(page_url)
     instance.getLinks()
