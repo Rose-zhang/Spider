@@ -1,3 +1,4 @@
+# encoding: UTF-8
 import re
 import requests
 from bs4 import BeautifulSoup
@@ -13,23 +14,38 @@ class RootPage:
 	def __init__(self, url):
 		self.url = url
 
+	# fetch all item from the root page
 	def get_items_link(self):
-		item_info = []
+		item_info = {}
 		s = requests.session()
 		r = s.post(self.url)
 		soup = BeautifulSoup(r.text, "html.parser")
-		line_pool = soup.find_all("div", "item4line1")
-		for line in line_pool:
-			item_info.append(self.get_items_from_line(line))
 
+		# locating the item by the key class 'item\dline\d'
+		# which means there are several items in a line
+		line_pool = soup.find_all("div", re.compile(r'item\dline\d'))
+		for line in line_pool:
+			item_info.update(self.get_items_from_line(line))
+		print item_info
+		return item_info
+
+	# items are arranged in line
 	def get_items_from_line(self, line):
-		item_info = []
+		item_info = {}
 		details = line.find_all("dd", "detail")
 		for detail in details:
 			item_url = detail.a.attrs['href']
-			item_name = detail.a.contents
-			print item_url
-			print item_name
+			item_name = self.generate_item_name(detail.a.contents)
+			item_info[item_url] = item_name
+		return item_info
+
+	# some key words may be stressed, we need to get pure item name
+	def generate_item_name(self, name_list):
+		whole_name = ''
+		for name in name_list:
+			whole_name += name.string
+		return whole_name
+
 
 if __name__ == '__main__':
 	page_url = protocol + "//chengxinshudian88.taobao.com/search.htm?orderType=coefp_desc&viewType=grid&keyword=%CA%B5%D1%E9%B0%E0&lowPrice=&highPrice="
