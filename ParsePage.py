@@ -1,46 +1,38 @@
-__author__ = 'think'
-# this module is for dealing with the rootURL and get a bunch of the links to each item
-
 import re
-import urllib2
+import requests
 from bs4 import BeautifulSoup
+
+__author__ = 'think'
+
+
+# this module is for dealing with the rootURL and get a bunch of the links to each item
+protocol = "http:"
 
 
 class RootPage:
-    def __init__(self, page_url):
-        self.pageURL = page_url
-        content = urllib2.urlopen(page_url)
-        html = content.read()
-        content = html.decode('gbk', 'ignore')
-        # print(html)
-        content = re.sub('&nbsp;', ' ', content)
-        content = re.sub('\n', ' ', content)
+	def __init__(self, url):
+		self.url = url
 
-        self.soup = BeautifulSoup(content, "html.parser")
-        # self.soup = BeautifulSoup(open(page_url), "html.parser")
+	def get_items_link(self):
+		item_info = []
+		s = requests.session()
+		r = s.post(self.url)
+		soup = BeautifulSoup(r.text, "html.parser")
+		line_pool = soup.find_all("div", "item4line1")
+		for line in line_pool:
+			item_info.append(self.get_items_from_line(line))
 
-    def getLinks(self):
-        # pattern = re.compile('item?line?')
-        # get all the link in the root page <1>
-        # link_pool = self.soup.select('a[href]')
-        temp = self.soup.select('div[class="item4line1"]')
-        for i in temp:
-            print(i.prettify('gbk'))
-        return
-
-        link_pool = self.soup.find_all('a')
-        href_container = []
-        pattern = re.compile(r'.*item\.taobao\.com.*')
-        # print(link_pool.__len__())
-        for link in link_pool:
-            if link.get('href') and re.match(pattern, link.get('href')):
-                href_container.append(link.get('href'))
-                # print link.prettify('gbk')
-        # print href_container.__len__()
-
+	def get_items_from_line(self, line):
+		item_info = []
+		details = line.find_all("dd", "detail")
+		for detail in details:
+			item_url = detail.a.attrs['href']
+			item_name = detail.a.contents
+			print item_url
+			print item_name
 
 if __name__ == '__main__':
-    page_url = "https://chengxinshudian88.taobao.com/search.htm?q=%CE%E5%C4%EA%B8%DF%BF%BC&searcy_type=item&s_from=newHeader&source=&ssid=s5-e&search=y&spm=a1z10.1.1996643285.d4916905&initiative_id=shopz_20150801"
-    # page_url = "index.html"
-    instance = RootPage(page_url)
-    instance.getLinks()
+	page_url = protocol + "//chengxinshudian88.taobao.com/search.htm?orderType=coefp_desc&viewType=grid&keyword=%CA%B5%D1%E9%B0%E0&lowPrice=&highPrice="
+	# page_url = "index.html"
+	instance = RootPage(page_url)
+	instance.get_items_link()
