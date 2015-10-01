@@ -84,21 +84,112 @@
     <number>24</number>
    </property>
   </widget>
-  <widget class="QTableView" name="display_download">
+  <widget class="QTableWidget" name="display_download">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>20</x>
      <y>50</y>
-     <width>741</width>
+     <width>761</width>
      <height>481</height>
     </rect>
    </property>
-   <property name="autoFillBackground">
-    <bool>false</bool>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
    </property>
-   <property name="sortingEnabled">
-    <bool>false</bool>
+   <property name="editTriggers">
+    <set>QAbstractItemView::NoEditTriggers</set>
    </property>
+   <property name="gridStyle">
+    <enum>Qt::NoPen</enum>
+   </property>
+   <row>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>3</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>5</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>6</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>7</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>8</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>9</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>10</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>11</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>12</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>13</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>14</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>15</string>
+    </property>
+   </row>
+   <column>
+    <property name="text">
+     <string>宝贝URL</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>宝贝名称</string>
+    </property>
+   </column>
   </widget>
  </widget>
  <resources/>
