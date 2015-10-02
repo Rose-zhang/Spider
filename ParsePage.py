@@ -7,7 +7,7 @@ __author__ = 'think'
 
 
 # this module is for dealing with the rootURL and get a bunch of the links to each item
-protocol = "http:"
+protocol = "https:"
 
 
 class RootPage:

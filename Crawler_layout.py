@@ -18,6 +18,7 @@ class Widget(QtGui.QWidget, Ui_Form):
 		self.setupUi(self)
 		self.exit.clicked.connect(self.close_event_for_button)
 		self.craw_items.clicked.connect(self.download_link)
+		self.progressBar.hide()
 
 	def closeEvent(self, event):
 		reply = QtGui.QMessageBox.question(
