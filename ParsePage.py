@@ -52,6 +52,5 @@ class RootPage:
 
 if __name__ == '__main__':
 	page_url = protocol + "//chengxinshudian88.taobao.com/search.htm?orderType=coefp_desc&viewType=grid&keyword=%CA%B5%D1%E9%B0%E0&lowPrice=&highPrice="
-	# page_url = "index.html"
 	instance = RootPage(page_url)
 	instance.get_items_link()
