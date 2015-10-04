@@ -2,8 +2,10 @@
 ### Example user template
 
 # IntelliJ project files
-.idea
 *.iml
+.idea/workspace.xml
+*.pyc
 out
+/.idea
 gen
 # Created by .ignore support plugin (hsz.mobi)
