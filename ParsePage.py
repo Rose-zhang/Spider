@@ -17,17 +17,20 @@ class RootPage:
 
 	# fetch all item from the root page
 	def get_items_link(self):
-		s = requests.session()
-		r = s.post(self.url)
-		soup = BeautifulSoup(r.text, "html.parser")
+		# s = requests.session()
+		try:
+			r = requests.post(self.url)
+			soup = BeautifulSoup(r.text, "html.parser")
 
-		# locating the item by the key class 'item\dline\d'
-		# which means there are several items in a line
-		line_pool = soup.find_all("div", re.compile(r'item\dline\d'))
-		for line in line_pool:
-			self.get_items_from_line(line)
-		# print item_info
-		return self.item_info
+			# locating the item by the key class 'item\dline\d'
+			# which means there are several items in a line
+			line_pool = soup.find_all("div", re.compile(r'item\dline\d'))
+			for line in line_pool:
+				self.get_items_from_line(line)
+			# print item_info
+			return self.item_info
+		except Exception, e:
+			raise Exception(u'下载出错，请检查链接地址或是网络环境是否正常')
 
 	# items are arranged in line
 	def get_items_from_line(self, line):

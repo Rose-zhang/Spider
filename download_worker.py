@@ -1,20 +1,26 @@
 import threading
 from ParseItem import Item
+import logging
 
 __author__ = 'Jason-Zhang'
 
+mutex = threading.Lock()
+logger = logging.getLogger("crawler")
+
 
 class DownloadWorker(threading.Thread):
-	def __init__(self, item_info, path, progressBar):
+	def __init__(self, queue, path, progressbar):
 		threading.Thread.__init__(self)
-		self.item_info = item_info
+		self.queue = queue
 		self.path = path
-		self.progressBar = progressBar
+		self.progressBar = progressbar
 
 	def run(self):
-		i = 0
-		for single_item in self.item_info:
-			i += 1
-			item = Item(single_item['item_url'])
+		while not self.queue.empty():
+			logger.debug(self.queue.qsize())
+			logger.debug(self.queue.qsize())
+			item = Item(self.queue.get()['item_url'])
 			item.parse_and_save(self.path)
-			self.progressBar.setValue(i)
+			mutex.acquire()
+			self.progressBar.setValue(self.progressBar.value() + 1)
+			mutex.release()
