@@ -9,18 +9,19 @@ logger = logging.getLogger("crawler")
 
 
 class DownloadWorker(threading.Thread):
-	def __init__(self, queue, path, progressbar):
+	def __init__(self, queue, path, file_name, progressbar):
 		threading.Thread.__init__(self)
 		self.queue = queue
 		self.path = path
 		self.progressBar = progressbar
+		self.file_name = file_name
 
 	def run(self):
 		while not self.queue.empty():
 			logger.debug(self.queue.qsize())
 			logger.debug(self.queue.qsize())
 			item = Item(self.queue.get()['item_url'])
-			item.parse_and_save(self.path)
+			item.parse_and_save(self.path, self.file_name)
 			mutex.acquire()
 			self.progressBar.setValue(self.progressBar.value() + 1)
 			mutex.release()

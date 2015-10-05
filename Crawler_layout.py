@@ -4,6 +4,8 @@ import logging
 import logging.config
 import os
 import Queue
+import codecs
+from constants import *
 
 from PyQt4 import QtGui, QtCore
 
@@ -88,11 +90,31 @@ class Widget(QtGui.QWidget, Ui_Form):
 		if not os.path.exists(resource_dir):
 			os.mkdir(resource_dir)
 
+		# TODO
+		CSV_file = self.__init_CSV_file(file_path)
 		if self.file_path is not None:
 			queue = self.generate_queue()
 			for i in range(4):
-				worker = DownloadWorker(queue, resource_dir, self.progressBar)
+				worker = DownloadWorker(queue, resource_dir, file_path, self.progressBar)
 				worker.start()
+
+	@staticmethod
+	def __init_CSV_file(self, path):
+		# 创建CSV文件
+
+		f = codecs.open(path, 'w', 'utf-8')
+		f.write(version)
+		f.write('\n')
+		for key in keys_en:
+			f.write(key)
+			f.write(',')
+		f.write('\n')
+
+		for key in keys_cn:
+			f.write(key)
+			f.write(',')
+		f.write('\n')
+		return f
 
 	def init_progressbar(self, maximum):
 		self.progressBar.show()

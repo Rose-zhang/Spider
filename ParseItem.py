@@ -8,7 +8,13 @@ from errcode import *
 from constants import *
 import hashlib
 
+import os
+import codecs
+import uuid
+
 __author__ = 'Jason-Zhang'
+
+protocol = 'https:'
 
 
 # Acknowledge
@@ -41,43 +47,109 @@ class Item:
 	def __init__(self, url):
 		self.url = url
 
-	def parse_and_save(self, path):
+	def parse_and_save(self, path, file_name):
 		# s = requests.session()
 		r = requests.get(self.url)
 		soup = BeautifulSoup(r.text, "html.parser")
 		# pattern = re.compile(r'".*"')
 
-		description = self.__get_item_description(soup)
 		title = self.__get_item_title(soup)
 		cid = self.__get_item_cid(soup)
 		price = self.__get_item_price(soup)
 		inputValues = self.__get_item_inputValues(soup)
 		subtitle = self.__get_item_subtitle(soup)
 		picture = self.__get_item_picture(soup)
-		item_info = {
-			'title': title,
-			'cid': cid,
-			'price': price,
-			'inputValues': inputValues,
-			'subtitle': subtitle,
-			'description': description,
-			'picture': picture
-		}
-		self.__download_acution_pictures(picture, path)
+		description = self.__get_item_description(soup, path + '\\' + str(uuid.uuid1()))
+
+		# 下载主图
+		picture = self.__download_acution_pictures(picture, path)
+		# print picture
+		picture_union = ''
+		i = 0
+		for p in picture:
+			append = p + ':1:' + str(i) + ':|;'
+			picture_union += append
+		item_info = [
+			title,
+			cid,
+			price,
+			str(self.__get_item_number()),
+			description,
+			picture_union,
+			self.__get_item_inputPids(),
+			inputValues,
+			subtitle
+		]
+
+		self.__write_info_csv(item_info, file_name)
+
+	# print description
 
 	@staticmethod
-	def __get_item_description(soup):
+	def __write_info_csv(item_info, path):
+		f = None
+		try:
+			f = codecs.open(path, 'w', 'utf-8')
+			f.write(version)
+			f.write('\n')
+			for key in keys_en:
+				f.write(key)
+				f.write(',')
+			f.write('\n')
+
+			for key in keys_cn:
+				f.write(key)
+				f.write(',')
+			f.write('\n')
+
+			# write main info
+			for info in item_info:
+				f.write(info)
+				f.write(',')
+
+			f.flush()
+		finally:
+			f.close()
+
+	def __get_item_description(self, soup, path):
 		pattern = re.compile(r'//desc\.alicdn.com.*"')
 		scripts = soup.find_all("script")
 		for script in scripts:
 			match = pattern.findall(script.contents[0])
 			if len(match) != 1:
 				continue
-			description = match[0].split(":")[0]
-			description = description.replace('"', '')
-			description = description.replace(' ', '')
-			return description
+			description_url = match[0].split(":")[0]
+			description_url = description_url.replace('"', '')
+			description_url = description_url.replace(' ', '')
+			description = requests.get(protocol + description_url)
+			description = description.text
+			pattern = re.compile(r'<.*>')
+			match = pattern.findall(description)
+			s = BeautifulSoup(match[0], 'html.parser')
+			img_list = s.find_all('img')
+			# img_list[0]['src'] = 'haha'
+
+			# 创建描述图片存放目录
+			if not os.path.exists(path):
+				os.makedirs(path)
+			self.__download_and_replace(img_list, path)
+			return str(s.decode('utf-8').replace('\n', ''))
 		raise Exception(ERROR_DESCRIPTION_URL)
+
+	@staticmethod
+	def __download_and_replace(img_list, path):
+		i = 1
+		for img in img_list:
+			pic_url = img['src']
+			pic = requests.get(pic_url)
+			pic_content = pic.content
+			pic_path = path + '\\' + str(i) + '.jpg'
+			f = open(pic_path, 'wb')
+			f.write(pic_content)
+			f.flush()
+			f.close()
+			img['src'] = pic_path
+			i += 1
 
 	@staticmethod
 	def __get_item_title(soup):
@@ -115,6 +187,7 @@ class Item:
 			# json_data = json.loads(description, encoding='GB2312')
 			json_data = parse_js(description)
 			# print type(json_data)
+			# print json_data['item']['auctionImages']
 			return json_data['item']['auctionImages']
 		raise Exception(ERROR_DESCRIPTION_URL)
 
@@ -133,10 +206,15 @@ class Item:
 			f.write(pic_content)
 			f.flush()
 			f.close()
+		return pic_md5_list
 
 	@staticmethod
 	def __get_item_inputPids():
 		return ISBN_KEY
+
+	@staticmethod
+	def __get_item_number():
+		return 200
 
 	@staticmethod
 	def __get_item_inputValues(soup):
@@ -156,11 +234,12 @@ class Item:
 		subtitle = soup.select('[class~=tb-subtitle]')
 		# print subtitle
 		if len(subtitle) == 0:
-			return None
+			return ''
+		# print subtitle[0].contents[0].replace('\n', '')
 		return subtitle[0].contents[0].replace('\n', '')
 
 
 if __name__ == '__main__':
-	url = "https://item.taobao.com/item.htm?spm=a1z10.3-c.w4002-5537852711.32.bjyZhS&id=45815446244"
+	url = "https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-5538482731.26.X8MPJ9&id=520510334875"
 	item = Item(url)
-	item.parse_and_save('C:\\Users\\think\\Desktop\\123')
+	item.parse_and_save('C:\\Users\\think\\Desktop\\123', 'C:\\Users\\think\\Desktop\\123.csv')
