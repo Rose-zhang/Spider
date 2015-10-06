@@ -1,20 +1,27 @@
 # encoding: UTF-8
 import re
+import hashlib
+import os
+import uuid
+import logging
 
 import requests
 from bs4 import BeautifulSoup
 
+import threading
+
 from errcode import *
 from constants import *
-import hashlib
 
-import os
 import codecs
-import uuid
 
 __author__ = 'Jason-Zhang'
 
 protocol = 'https:'
+
+logger = logging.getLogger("crawler")
+
+mutex = threading.Lock()
 
 
 # Acknowledge
@@ -47,7 +54,7 @@ class Item:
 	def __init__(self, url):
 		self.url = url
 
-	def parse_and_save(self, path, file_name):
+	def parse_and_save(self, path, file_path):
 		# s = requests.session()
 		r = requests.get(self.url)
 		soup = BeautifulSoup(r.text, "html.parser")
@@ -81,28 +88,17 @@ class Item:
 			subtitle
 		]
 
-		self.__write_info_csv(item_info, file_name)
-
-	# print description
+		mutex.acquire()
+		self.__write_info_csv(item_info, file_path)
+		mutex.release()
 
 	@staticmethod
-	def __write_info_csv(item_info, path):
+	def __write_info_csv(item_info, file_path):
+		# write main info
 		f = None
 		try:
-			f = codecs.open(path, 'w', 'utf-8')
-			f.write(version)
+			f = codecs.open(file_path, 'a', 'utf-8')
 			f.write('\n')
-			for key in keys_en:
-				f.write(key)
-				f.write(',')
-			f.write('\n')
-
-			for key in keys_cn:
-				f.write(key)
-				f.write(',')
-			f.write('\n')
-
-			# write main info
 			for info in item_info:
 				f.write(info)
 				f.write(',')
@@ -127,20 +123,25 @@ class Item:
 			match = pattern.findall(description)
 			s = BeautifulSoup(match[0], 'html.parser')
 			img_list = s.find_all('img')
-			# img_list[0]['src'] = 'haha'
 
 			# 创建描述图片存放目录
 			if not os.path.exists(path):
 				os.makedirs(path)
-			self.__download_and_replace(img_list, path)
-			return str(s.decode('utf-8').replace('\n', ''))
+			if len(img_list) != 0:
+				self.__download_and_replace(img_list, path)
+			return str(s.encode('utf-8').replace('\n', ''))
 		raise Exception(ERROR_DESCRIPTION_URL)
 
 	@staticmethod
 	def __download_and_replace(img_list, path):
 		i = 1
 		for img in img_list:
+			if img.get('src') is None:
+				continue
+			# logger.debug(img)
 			pic_url = img['src']
+			if pic_url.find('http') == -1:
+				pic_url = protocol + pic_url
 			pic = requests.get(pic_url)
 			pic_content = pic.content
 			pic_path = path + '\\' + str(i) + '.jpg'
@@ -240,6 +241,6 @@ class Item:
 
 
 if __name__ == '__main__':
-	url = "https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-5538482731.26.X8MPJ9&id=520510334875"
+	url = "https://item.taobao.com/item.htm?spm=a1z10.1-c.w7212643-5537870227.22.waxPIB&id=40000980628"
 	item = Item(url)
 	item.parse_and_save('C:\\Users\\think\\Desktop\\123', 'C:\\Users\\think\\Desktop\\123.csv')

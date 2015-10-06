@@ -4,14 +4,12 @@ import logging
 import logging.config
 import os
 import Queue
-import codecs
-from constants import *
 
 from PyQt4 import QtGui, QtCore
 
 from MainLayout import Ui_Form
 from ParsePage import RootPage
-from download_worker import DownloadWorker
+from download_boss import DownloadBoss
 
 __author__ = 'Jason-Zhang'
 
@@ -20,16 +18,21 @@ logger = logging.getLogger("crawler")
 
 
 class Widget(QtGui.QWidget, Ui_Form):
+	# signal_increment_bar = QtCore.pyqtSignal()
+
 	def __init__(self, parent=None):
 		QtGui.QWidget.__init__(self, parent)
 		self.setupUi(self)
 		self.exit.clicked.connect(self.close_event_for_button)
 		self.craw_items.clicked.connect(self.download_link)
 		self.download_item.clicked.connect(self.download_items)
+		# self.signal_increment_bar.connect(self.increase_progressbar)
 		self.progressBar.hide()
 		self.file_path = None
 		self.item_info = []
-		logger.debug('haha')
+		self.job = None
+
+	# logger.debug('haha')
 
 	def closeEvent(self, event):
 		reply = QtGui.QMessageBox.question(
@@ -90,31 +93,11 @@ class Widget(QtGui.QWidget, Ui_Form):
 		if not os.path.exists(resource_dir):
 			os.mkdir(resource_dir)
 
-		# TODO
-		CSV_file = self.__init_CSV_file(file_path)
 		if self.file_path is not None:
 			queue = self.generate_queue()
-			for i in range(4):
-				worker = DownloadWorker(queue, resource_dir, file_path, self.progressBar)
-				worker.start()
-
-	@staticmethod
-	def __init_CSV_file(self, path):
-		# 创建CSV文件
-
-		f = codecs.open(path, 'w', 'utf-8')
-		f.write(version)
-		f.write('\n')
-		for key in keys_en:
-			f.write(key)
-			f.write(',')
-		f.write('\n')
-
-		for key in keys_cn:
-			f.write(key)
-			f.write(',')
-		f.write('\n')
-		return f
+			self.job = DownloadBoss(self, queue, resource_dir, file_path, 4)
+			self.job.signal_job_completed.connect(self.job_completed_notify)
+			self.job.start()
 
 	def init_progressbar(self, maximum):
 		self.progressBar.show()
@@ -122,11 +105,17 @@ class Widget(QtGui.QWidget, Ui_Form):
 		self.progressBar.setMaximum(maximum)
 		self.progressBar.setValue(0)
 
+	def increase_progressbar(self):
+		self.progressBar.setValue(self.progressBar.value() + 1)
+
 	def generate_queue(self):
 		queue = Queue.Queue(0)
 		for item in self.item_info:
 			queue.put(item)
 		return queue
+
+	def job_completed_notify(self):
+		QtGui.QMessageBox.information(self, u'系统消息', u'链接抓取完成', u'确定')
 
 
 if __name__ == '__main__':
