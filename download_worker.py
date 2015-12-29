@@ -23,7 +23,7 @@ class DownloadWorker(QtCore.QThread):
 	def run(self):
 		while not self.queue.empty():
 			# logger.debug(self.queue.qsize())
-			# logger.debug(self.queue.qsize())
+			logger.debug(self.queue.qsize())
 			try:
 				item = Item(self.queue.get()['item_url'])
 				item.parse_and_save(self.path, self.file_path)

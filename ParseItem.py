@@ -108,15 +108,19 @@ class Item:
 			f.close()
 
 	def __get_item_description(self, soup, path):
-		pattern = re.compile(r'//desc\.alicdn.com.*"')
+		pattern = re.compile(r'//dsc\.taobaocdn\.com.*?,')
 		scripts = soup.find_all("script")
 		for script in scripts:
+			if len(script.contents) == 0:
+				continue
 			match = pattern.findall(script.contents[0])
 			if len(match) != 1:
 				continue
-			description_url = match[0].split(":")[0]
-			description_url = description_url.replace('"', '')
-			description_url = description_url.replace(' ', '')
+			description_url = match[0].split(":")[0][:-2]
+			# description_url = description_url.replace('"', '')
+			# description_url = description_url.replace(' ', '')
+
+			protocol = 'http:'
 			description = requests.get(protocol + description_url)
 			description = description.text
 			pattern = re.compile(r'<.*>')
@@ -176,26 +180,28 @@ class Item:
 	# FIXME improve this stupid parsing
 	@staticmethod
 	def __get_item_picture(soup):
-		pattern = re.compile(r'g_config\.idata=.*}')
+		# pattern = re.compile(r'g_config.*idata.*?;')
+
+		pattern = re.compile(r'auctionImages.*?]')
 		scripts = soup.find_all("script")
 		for script in scripts:
+			if len(script.contents) == 0:
+				continue
 			match = pattern.findall(script.contents[0].replace('\n', '').replace('\r', ''))
 			if len(match) != 1:
 				continue
 			config_data = match[0]
-			pattern = re.compile(r'{.*}')
-			description = pattern.findall(config_data)[0][:-1]
-			# json_data = json.loads(description, encoding='GB2312')
-			json_data = parse_js(description)
-			# print type(json_data)
-			# print json_data['item']['auctionImages']
-			return json_data['item']['auctionImages']
+			pattern = re.compile(r'\[.*\]')
+			description = pattern.findall(config_data)[0][1:-1].replace('\"', '').split(',')
+
+			return description
 		raise Exception(ERROR_DESCRIPTION_URL)
 
 	@staticmethod
 	def __download_acution_pictures(pic_list, path):
 		pic_md5_list = []
 		protocol = "http:"
+
 		for pic_url in pic_list:
 			pic = requests.get(protocol + pic_url)
 			pic_content = pic.content
@@ -234,13 +240,13 @@ class Item:
 	def __get_item_subtitle(soup):
 		subtitle = soup.select('[class~=tb-subtitle]')
 		# print subtitle
-		if len(subtitle) == 0:
+		if len(subtitle) == 0 or len(subtitle[0]) == 0:
 			return ''
 		# print subtitle[0].contents[0].replace('\n', '')
 		return subtitle[0].contents[0].replace('\n', '')
 
 
 if __name__ == '__main__':
-	url = "https://item.taobao.com/item.htm?spm=a1z10.1-c.w7212643-5537870227.22.waxPIB&id=40000980628"
+	url = "https://item.taobao.com/item.htm?spm=a1z10.3-c.w4002-5537852711.21.jemVLg&id=524098409047"
 	item = Item(url)
 	item.parse_and_save('C:\\Users\\think\\Desktop\\123', 'C:\\Users\\think\\Desktop\\123.csv')
