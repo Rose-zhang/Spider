@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import codecs
+import csv
 
 from PyQt4 import QtCore
 
@@ -37,18 +37,18 @@ class DownloadBoss(QtCore.QThread):
 	@staticmethod
 	def __init_csv_file(path):
 		# 创建CSV文件
-		f = None
+		file = None
 		try:
-			f = codecs.open(path, 'w', 'utf-8')
-			f.write(version)
-			f.write('\n')
-			for key in keys_en:
-				f.write(key)
-				f.write(',')
-			f.write('\n')
+			# f = codecs.open(path, 'w', 'utf-8')
+			file = open(path, 'wb+')
 
-			for key in keys_cn:
-				f.write(key)
-				f.write(',')
+			# F word
+			# write BOM first
+			file.write('\xEF\xBB\xBF')
+			f = csv.writer(file)
+			f.writerow([version])
+			f.writerow(keys_en)
+			f.writerow(keys_cn)
+
 		finally:
-			f.close()
+			file.close()

@@ -21,11 +21,15 @@ class DownloadWorker(QtCore.QThread):
 		self.file_path = file_path
 
 	def run(self):
-		while not self.queue.empty():
-			# logger.debug(self.queue.qsize())
+		while True:
 			logger.debug(self.queue.qsize())
+			mutex.acquire()
+			if self.queue.empty():
+				mutex.release()
+				break
+			item = Item(self.queue.get()['item_url'])
+			mutex.release()
 			try:
-				item = Item(self.queue.get()['item_url'])
 				item.parse_and_save(self.path, self.file_path)
 			except Exception, e:
 				logger.error(e.message)

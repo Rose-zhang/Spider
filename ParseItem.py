@@ -14,6 +14,7 @@ from errcode import *
 from constants import *
 
 import codecs
+import csv
 
 __author__ = 'Jason-Zhang'
 
@@ -97,13 +98,9 @@ class Item:
 		# write main info
 		f = None
 		try:
-			f = codecs.open(file_path, 'a', 'utf-8')
-			f.write('\n')
-			for info in item_info:
-				f.write(info)
-				f.write(',')
-
-			f.flush()
+			f = open(file_path, 'ab+')
+			csv_writer = csv.writer(f)
+			csv_writer.writerow(item_info)
 		finally:
 			f.close()
 
@@ -234,7 +231,7 @@ class Item:
 			if pattern.match(content.string):
 				str = content.string
 				return str.split(':')[1].replace(' ', '')
-		return None
+		return ''
 
 	@staticmethod
 	def __get_item_subtitle(soup):
@@ -247,6 +244,6 @@ class Item:
 
 
 if __name__ == '__main__':
-	url = "https://item.taobao.com/item.htm?spm=a1z10.3-c.w4002-5537852711.21.jemVLg&id=524098409047"
+	url = "https://item.taobao.com/item.htm?spm=a1z10.3-c.w4002-11395459624.10.XXQdqt&id=523002034838"
 	item = Item(url)
 	item.parse_and_save('C:\\Users\\think\\Desktop\\123', 'C:\\Users\\think\\Desktop\\123.csv')
