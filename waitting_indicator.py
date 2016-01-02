@@ -10,6 +10,7 @@ class Overlay(QWidget):
 		palette = QPalette(self.palette())
 		palette.setColor(palette.Background, Qt.transparent)
 		self.setPalette(palette)
+		self.timer = None
 
 	def paintEvent(self, event):
 
@@ -40,35 +41,32 @@ class Overlay(QWidget):
 
 		self.counter += 1
 		self.update()
-		if self.counter == 60:
-			self.killTimer(self.timer)
-			self.hide()
 
 
-class MainWindow(QMainWindow):
-	def __init__(self, parent=None):
-		QMainWindow.__init__(self, parent)
-
-		widget = QWidget(self)
-		self.editor = QTextEdit()
-		self.editor.setPlainText("0123456789" * 100)
-		layout = QGridLayout(widget)
-		layout.addWidget(self.editor, 0, 0, 1, 3)
-		button = QPushButton("Wait")
-		layout.addWidget(button, 1, 1, 1, 1)
-
-		self.setCentralWidget(widget)
-		self.overlay = Overlay(self.centralWidget())
-		self.overlay.hide()
-		button.clicked.connect(self.overlay.show)
-
-	def resizeEvent(self, event):
-		self.overlay.resize(event.size())
-		event.accept()
-
-
-if __name__ == "__main__":
-	app = QApplication(sys.argv)
-	window = MainWindow()
-	window.show()
-	sys.exit(app.exec_())
+# class MainWindow(QMainWindow):
+# 	def __init__(self, parent=None):
+# 		QMainWindow.__init__(self, parent)
+#
+# 		widget = QWidget(self)
+# 		self.editor = QTextEdit()
+# 		self.editor.setPlainText("0123456789" * 100)
+# 		layout = QGridLayout(widget)
+# 		layout.addWidget(self.editor, 0, 0, 1, 3)
+# 		button = QPushButton("Wait")
+# 		layout.addWidget(button, 1, 1, 1, 1)
+#
+# 		self.setCentralWidget(widget)
+# 		self.overlay = Overlay(self.centralWidget())
+# 		self.overlay.hide()
+# 		button.clicked.connect(self.overlay.show)
+#
+# 	def resizeEvent(self, event):
+# 		self.overlay.resize(event.size())
+# 		event.accept()
+#
+#
+# if __name__ == "__main__":
+# 	app = QApplication(sys.argv)
+# 	window = MainWindow()
+# 	window.show()
+# 	sys.exit(app.exec_())

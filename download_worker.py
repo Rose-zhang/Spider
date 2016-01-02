@@ -12,7 +12,7 @@ logger = logging.getLogger("crawler")
 
 
 class DownloadWorker(QtCore.QThread):
-	signal_increment_bar = QtCore.pyqtSignal()
+	signal_increment_bar = QtCore.pyqtSignal(int)
 
 	def __init__(self, queue, path, file_path, parent=None):
 		super(DownloadWorker, self).__init__(parent)
@@ -34,4 +34,4 @@ class DownloadWorker(QtCore.QThread):
 			except Exception, e:
 				logger.error(e.message)
 			finally:
-				self.signal_increment_bar.emit()
+				self.signal_increment_bar.emit(1)
