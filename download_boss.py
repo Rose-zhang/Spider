@@ -10,7 +10,7 @@ __author__ = 'Jason-Zhang'
 
 
 class DownloadBoss(QtCore.QThread):
-	signal_job_completed = QtCore.pyqtSignal()
+	signal_job_completed = QtCore.pyqtSignal(str, str)
 
 	def __init__(self, widget, queue, path, file_path, thread_num, parent=None):
 		super(DownloadBoss, self).__init__(parent)
@@ -32,7 +32,7 @@ class DownloadBoss(QtCore.QThread):
 
 		for t in threads:
 			t.wait()
-		self.signal_job_completed.emit()
+		self.signal_job_completed.emit(u'系统消息', u'宝贝下载完成')
 
 	@staticmethod
 	def __init_csv_file(path):

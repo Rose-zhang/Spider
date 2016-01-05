@@ -12,7 +12,6 @@ from MainLayout import Ui_Form
 from download_boss import DownloadBoss
 from download_item_link import DownloadLink
 
-
 __author__ = 'Jason-Zhang'
 
 logging.config.fileConfig("logger.config")
@@ -55,7 +54,7 @@ class Widget(QtGui.QMainWindow, Ui_Form):
 				u'确定退出', QtGui.QMessageBox.Yes | QtGui.QMessageBox.No, QtGui.QMessageBox.No
 		)
 		if reply == QtGui.QMessageBox.Yes:
-			exit(0)
+			sys.exit(0)
 
 	def download_link(self):
 		try:
@@ -90,7 +89,8 @@ class Widget(QtGui.QMainWindow, Ui_Form):
 				item_name = QtGui.QTableWidgetItem(self.item_info[i]['item_name'])
 				self.display_download.setItem(i, 0, item_url)
 				self.display_download.setItem(i, 1, item_name)
-			QtGui.QMessageBox.information(self, u'系统消息', u'链接抓取完成', u'确定')
+			# QtGui.QMessageBox.information(self, u'系统消息', u'链接抓取完成', u'确定')
+			self.job_completed_notify(u'系统消息', u'链接抓取完成')
 
 		except Exception, e:
 			QtGui.QMessageBox.information(self, u'警告', e.message, u'确定')
@@ -137,8 +137,8 @@ class Widget(QtGui.QMainWindow, Ui_Form):
 			queue.put(item)
 		return queue
 
-	def job_completed_notify(self):
-		QtGui.QMessageBox.information(self, u'系统消息', u'链接抓取完成', u'确定')
+	def job_completed_notify(self, message_type, message):
+		QtGui.QMessageBox.information(self, message_type, message, u'确定')
 
 
 if __name__ == '__main__':

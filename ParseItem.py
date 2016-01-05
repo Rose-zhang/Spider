@@ -50,6 +50,7 @@ class Item:
 		for p in picture:
 			append = p + ':1:' + str(i) + ':|;'
 			picture_union += append
+			i += 1
 		item_info = [
 			title,
 			cid,

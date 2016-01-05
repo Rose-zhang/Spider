@@ -1,4 +1,4 @@
-# encoding: UTF-8
+# -*- coding: utf-8 -*-
 __author__ = 'Jason-Zhang'
 ISBN_KEY = '1636953'
 
