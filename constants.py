@@ -5,31 +5,31 @@ ISBN_KEY = '1636953'
 version = 'version 1.00'
 
 title_en = 'title'
-title_cn = u'宝贝名称'
+title_cn = '宝贝名称'
 
 cid_en = 'cid'
-cid_cn = u'宝贝类目'
+cid_cn = '宝贝类目'
 
 price_en = 'price'
-price_cn = u'宝贝价格'
+price_cn = '宝贝价格'
 
 num_en = 'num'
-num_cn = u'宝贝数量'
+num_cn = '宝贝数量'
 
 description_en = 'description'
-description_cn = u'宝贝描述'
+description_cn = '宝贝描述'
 
 picture_en = 'picture'
-picture_cn = u'新图片'
+picture_cn = '新图片'
 
 inputPids_en = 'inputPids'
-inputPids_cn = u'用户输入ID串'
+inputPids_cn = '用户输入ID串'
 
 inputValues_en = 'inputValues'
-inputValues_cn = u'用户输入名-值对'
+inputValues_cn = '用户输入名-值对'
 
 subtitle_en = 'subtitle'
-subtitle_cn = u'宝贝卖点'
+subtitle_cn = '宝贝卖点'
 
 keys_en = [
 	title_en,
@@ -43,6 +43,8 @@ keys_en = [
 	subtitle_en
 ]
 
+# FIXME
+# fucking pyinstaller
 keys_cn = [
 	title_cn,
 	cid_cn,

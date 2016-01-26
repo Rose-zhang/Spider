@@ -49,6 +49,7 @@ class DownloadBoss(QtCore.QThread):
 			f.writerow([version])
 			f.writerow(keys_en)
 			f.writerow(keys_cn)
-
 		finally:
-			file.close()
+			if file:
+				file.close()
+

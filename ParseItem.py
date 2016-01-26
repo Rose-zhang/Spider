@@ -4,6 +4,7 @@ import hashlib
 import os
 import uuid
 import logging
+import sys
 
 import requests
 from bs4 import BeautifulSoup
@@ -51,6 +52,7 @@ class Item:
 			append = p + ':1:' + str(i) + ':|;'
 			picture_union += append
 			i += 1
+		# logger.debug(sys.getdefaultencoding())
 		item_info = [
 			title,
 			cid,
@@ -64,12 +66,14 @@ class Item:
 		]
 
 		mutex.acquire()
+		logger.debug('write item to csv')
 		self.__write_info_csv(item_info, file_path)
 		mutex.release()
 
 	@staticmethod
 	def __write_info_csv(item_info, file_path):
 		# write main info
+		# logger.debug(item_info)
 		f = None
 		try:
 			f = open(file_path, 'ab+')

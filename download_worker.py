@@ -22,8 +22,8 @@ class DownloadWorker(QtCore.QThread):
 
 	def run(self):
 		while True:
-			logger.debug(self.queue.qsize())
 			mutex.acquire()
+			logger.debug(self.queue.qsize())
 			if self.queue.empty():
 				mutex.release()
 				break
@@ -32,6 +32,6 @@ class DownloadWorker(QtCore.QThread):
 			try:
 				item.parse_and_save(self.path, self.file_path)
 			except Exception, e:
-				logger.error(e.message)
+				logger.error(e)
 			finally:
 				self.signal_increment_bar.emit(1)

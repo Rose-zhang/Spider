@@ -142,6 +142,8 @@ class Widget(QtGui.QMainWindow, Ui_Form):
 
 
 if __name__ == '__main__':
+	reload(sys)
+	sys.setdefaultencoding('utf8')
 	app = QtGui.QApplication(sys.argv)
 	widget = Widget()
 	widget.show()
