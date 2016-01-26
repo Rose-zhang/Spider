@@ -27,6 +27,7 @@ class Widget(QtGui.QMainWindow, Ui_Form):
 		self.exit.clicked.connect(self.close_event_for_button)
 		self.craw_items.clicked.connect(self.download_link)
 		self.download_item.clicked.connect(self.download_items)
+		self.download_item.setDisabled(True)
 		# self.signal_increment_bar.connect(self.increase_progressbar)
 		self.progressBar.hide()
 		self.file_path = None
@@ -69,6 +70,9 @@ class Widget(QtGui.QMainWindow, Ui_Form):
 			# self.overlay = Overlay(self.centralWidget())
 			# self.overlay.show()
 
+			# disable download items
+			self.download_item.setDisabled(True)
+
 			self.init_progressbar(0)
 
 		except Exception, e:
@@ -90,6 +94,9 @@ class Widget(QtGui.QMainWindow, Ui_Form):
 				self.display_download.setItem(i, 0, item_url)
 				self.display_download.setItem(i, 1, item_name)
 			# QtGui.QMessageBox.information(self, u'系统消息', u'链接抓取完成', u'确定')
+
+			# enable user to download items
+			self.download_item.setDisabled(False)
 			self.job_completed_notify(u'系统消息', u'链接抓取完成')
 
 		except Exception, e:
