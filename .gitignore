@@ -4,9 +4,9 @@
 # IntelliJ project files
 *.iml
 *.pyc
-/.idea/workspace.xml
-/.idea
+build
+dist
 out
 gen
-*.log
+*.log*
 # Created by .ignore support plugin (hsz.mobi)
