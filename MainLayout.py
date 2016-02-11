@@ -25,12 +25,15 @@ except AttributeError:
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName(_fromUtf8("Form"))
+        Form.setEnabled(True)
         Form.resize(800, 600)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Preferred)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(Form.sizePolicy().hasHeightForWidth())
         Form.setSizePolicy(sizePolicy)
+        Form.setMinimumSize(QtCore.QSize(800, 600))
+        Form.setMaximumSize(QtCore.QSize(800, 600))
         self.download_item = QtGui.QPushButton(Form)
         self.download_item.setGeometry(QtCore.QRect(20, 560, 75, 23))
         self.download_item.setObjectName(_fromUtf8("download_item"))

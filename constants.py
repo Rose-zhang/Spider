@@ -32,27 +32,27 @@ subtitle_en = 'subtitle'
 subtitle_cn = '宝贝卖点'
 
 keys_en = [
-	title_en,
-	cid_en,
-	price_en,
-	num_en,
-	description_en,
-	picture_en,
-	inputPids_en,
-	inputValues_en,
-	subtitle_en
+    title_en,
+    cid_en,
+    price_en,
+    num_en,
+    description_en,
+    picture_en,
+    inputPids_en,
+    inputValues_en,
+    subtitle_en
 ]
 
 # FIXME
 # fucking pyinstaller
 keys_cn = [
-	title_cn,
-	cid_cn,
-	price_cn,
-	num_cn,
-	description_cn,
-	picture_cn,
-	inputPids_cn,
-	inputValues_cn,
-	subtitle_cn
+    title_cn,
+    cid_cn,
+    price_cn,
+    num_cn,
+    description_cn,
+    picture_cn,
+    inputPids_cn,
+    inputValues_cn,
+    subtitle_cn
 ]
