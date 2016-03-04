@@ -10,6 +10,12 @@ title_cn = '宝贝名称'
 cid_en = 'cid'
 cid_cn = '宝贝类目'
 
+location_state_en = 'location_state'
+location_state_cn = '省'
+
+location_city_en = 'location_city'
+location_city_cn = '城市'
+
 price_en = 'price'
 price_cn = '宝贝价格'
 
@@ -34,6 +40,8 @@ subtitle_cn = '宝贝卖点'
 keys_en = [
     title_en,
     cid_en,
+    location_state_en,
+    location_city_en,
     price_en,
     num_en,
     description_en,
@@ -43,11 +51,11 @@ keys_en = [
     subtitle_en
 ]
 
-# FIXME
-# fucking pyinstaller
 keys_cn = [
     title_cn,
     cid_cn,
+    location_state_cn,
+    location_city_cn,
     price_cn,
     num_cn,
     description_cn,

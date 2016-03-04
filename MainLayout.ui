@@ -37,7 +37,7 @@
   <widget class="QPushButton" name="download_item">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>100</x>
      <y>560</y>
      <width>75</width>
      <height>23</height>
@@ -105,7 +105,7 @@
      <x>20</x>
      <y>50</y>
      <width>761</width>
-     <height>481</height>
+     <height>471</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -126,6 +126,12 @@
    <property name="gridStyle">
     <enum>Qt::NoPen</enum>
    </property>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>250</number>
+   </attribute>
+   <attribute name="horizontalHeaderMinimumSectionSize">
+    <number>100</number>
+   </attribute>
    <row>
     <property name="text">
      <string>1</string>
@@ -211,6 +217,24 @@
      <string>宝贝名称</string>
     </property>
    </column>
+   <column>
+    <property name="text">
+     <string/>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="delete_item">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>560</y>
+     <width>61</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>删除</string>
+   </property>
   </widget>
  </widget>
  <resources/>

@@ -2,73 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89938fca-93d8-4b6f-9e64-66ec12ae67fd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/Crawler_layout/out00-Tree.toc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/waitting_indicator.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MainLayout.ui" afterPath="$PROJECT_DIR$/MainLayout.ui" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/Crawler_layout/Crawler_layout.exe" afterPath="$PROJECT_DIR$/build/Crawler_layout/Crawler_layout.exe" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/Crawler_layout/out00-PKG.pkg" afterPath="$PROJECT_DIR$/build/Crawler_layout/out00-PKG.pkg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/Crawler_layout/out00-PYZ.pyz" afterPath="$PROJECT_DIR$/build/Crawler_layout/out00-PYZ.pyz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/Crawler_layout.exe" afterPath="$PROJECT_DIR$/dist/Crawler_layout/Crawler_layout.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/PyQt4.QtCore.pyd" afterPath="$PROJECT_DIR$/dist/Crawler_layout/PyQt4.QtCore.pyd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/PyQt4.QtGui.pyd" afterPath="$PROJECT_DIR$/dist/Crawler_layout/PyQt4.QtGui.pyd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/_ctypes.pyd" afterPath="$PROJECT_DIR$/dist/Crawler_layout/_ctypes.pyd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/_hashlib.pyd" afterPath="$PROJECT_DIR$/dist/Crawler_layout/_hashlib.pyd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/_socket.pyd" afterPath="$PROJECT_DIR$/dist/Crawler_layout/_socket.pyd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/_ssl.pyd" afterPath="$PROJECT_DIR$/dist/Crawler_layout/_ssl.pyd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/bz2.pyd" afterPath="$PROJECT_DIR$/dist/Crawler_layout/bz2.pyd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/msvcm90.dll" afterPath="$PROJECT_DIR$/dist/Crawler_layout/msvcm90.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/msvcp90.dll" afterPath="$PROJECT_DIR$/dist/Crawler_layout/msvcp90.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/msvcr90.dll" afterPath="$PROJECT_DIR$/dist/Crawler_layout/msvcr90.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/pyexpat.pyd" afterPath="$PROJECT_DIR$/dist/Crawler_layout/pyexpat.pyd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/python27.dll" afterPath="$PROJECT_DIR$/dist/Crawler_layout/python27.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/accessible/qtaccessiblewidgets4.dll" afterPath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/accessible/qtaccessiblewidgets4.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/codecs/qcncodecs4.dll" afterPath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/codecs/qcncodecs4.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/codecs/qjpcodecs4.dll" afterPath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/codecs/qjpcodecs4.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/codecs/qkrcodecs4.dll" afterPath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/codecs/qkrcodecs4.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/codecs/qtwcodecs4.dll" afterPath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/codecs/qtwcodecs4.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/graphicssystems/qglgraphicssystem4.dll" afterPath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/graphicssystems/qglgraphicssystem4.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/iconengines/qsvgicon4.dll" afterPath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/iconengines/qsvgicon4.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/imageformats/qgif4.dll" afterPath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/imageformats/qgif4.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/imageformats/qico4.dll" afterPath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/imageformats/qico4.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/imageformats/qjpeg4.dll" afterPath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/imageformats/qjpeg4.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/imageformats/qmng4.dll" afterPath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/imageformats/qmng4.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/imageformats/qsvg4.dll" afterPath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/imageformats/qsvg4.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/imageformats/qtga4.dll" afterPath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/imageformats/qtga4.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/imageformats/qtiff4.dll" afterPath="$PROJECT_DIR$/dist/Crawler_layout/qt4_plugins/imageformats/qtiff4.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/qtcore4.dll" afterPath="$PROJECT_DIR$/dist/Crawler_layout/qtcore4.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/qtgui4.dll" afterPath="$PROJECT_DIR$/dist/Crawler_layout/qtgui4.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/qtopengl4.dll" afterPath="$PROJECT_DIR$/dist/Crawler_layout/qtopengl4.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/qtsvg4.dll" afterPath="$PROJECT_DIR$/dist/Crawler_layout/qtsvg4.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/qtxml4.dll" afterPath="$PROJECT_DIR$/dist/Crawler_layout/qtxml4.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/select.pyd" afterPath="$PROJECT_DIR$/dist/Crawler_layout/select.pyd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/sip.pyd" afterPath="$PROJECT_DIR$/dist/Crawler_layout/sip.pyd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/unicodedata.pyd" afterPath="$PROJECT_DIR$/dist/Crawler_layout/unicodedata.pyd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Spider.iml" afterPath="$PROJECT_DIR$/.idea/Spider.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler_layout.py" afterPath="$PROJECT_DIR$/Crawler_layout.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler_layout.spec" afterPath="$PROJECT_DIR$/Crawler_layout.spec" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MainLayout.py" afterPath="$PROJECT_DIR$/MainLayout.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseItem.py" afterPath="$PROJECT_DIR$/ParseItem.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParsePage.py" afterPath="$PROJECT_DIR$/ParsePage.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/Crawler_layout/Crawler_layout.exe.manifest" afterPath="$PROJECT_DIR$/build/Crawler_layout/Crawler_layout.exe.manifest" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/Crawler_layout/out00-Analysis.toc" afterPath="$PROJECT_DIR$/build/Crawler_layout/out00-Analysis.toc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/Crawler_layout/out00-COLLECT.toc" afterPath="$PROJECT_DIR$/build/Crawler_layout/out00-COLLECT.toc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/Crawler_layout/out00-EXE.toc" afterPath="$PROJECT_DIR$/build/Crawler_layout/out00-EXE.toc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/Crawler_layout/out00-PKG.toc" afterPath="$PROJECT_DIR$/build/Crawler_layout/out00-PKG.toc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/Crawler_layout/out00-PYZ.toc" afterPath="$PROJECT_DIR$/build/Crawler_layout/out00-PYZ.toc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/Crawler_layout/warnCrawler_layout.txt" afterPath="$PROJECT_DIR$/build/Crawler_layout/warnCrawler_layout.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/constants.py" afterPath="$PROJECT_DIR$/constants.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/crawler_layout.exe.manifest" afterPath="$PROJECT_DIR$/dist/Crawler_layout/crawler_layout.exe.manifest" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/microsoft.vc90.crt.manifest" afterPath="$PROJECT_DIR$/dist/Crawler_layout/microsoft.vc90.crt.manifest" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/Crawler_layout/requests/cacert.pem" afterPath="$PROJECT_DIR$/dist/Crawler_layout/requests/cacert.pem" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/download_boss.py" afterPath="$PROJECT_DIR$/download_boss.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/download_item_link.py" afterPath="$PROJECT_DIR$/download_item_link.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/download_worker.py" afterPath="$PROJECT_DIR$/download_worker.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errcode.py" afterPath="$PROJECT_DIR$/errcode.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils.py" afterPath="$PROJECT_DIR$/utils.py" />
     </list>
     <ignored path="Python.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,7 +28,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Spider$Test.coverage" NAME="Spider Coverage Results" MODIFIED="1437783352127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Spider$test.coverage" NAME="test Coverage Results" MODIFIED="1451530986590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Spider$Crawler_layout.coverage" NAME="Crawler_layout Coverage Results" MODIFIED="1455177927619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Spider$Crawler_layout.coverage" NAME="Crawler_layout Coverage Results" MODIFIED="1455961755684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$Test.coverage" NAME="Test Coverage Results" MODIFIED="1437781738396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Spider$ParseItem.coverage" NAME="ParseItem Coverage Results" MODIFIED="1451379011117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Spider$ParsePage.coverage" NAME="ParsePage Coverage Results" MODIFIED="1443695846843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -104,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/Crawler_layout.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+              <caret line="162" column="40" selection-start-line="162" selection-start-column="40" selection-end-line="162" selection-end-column="40" />
               <folding>
                 <element signature="e#24#34#0" expanded="true" />
               </folding>
@@ -116,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/MainLayout.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+              <caret line="151" column="39" selection-start-line="151" selection-start-column="39" selection-end-line="151" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -126,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/download_item_link.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="26" />
+              <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
               <folding>
                 <element signature="e#24#38#0" expanded="true" />
               </folding>
@@ -134,21 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="download_worker.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/download_worker.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="22" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ParseItem.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ParseItem.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ParseItem.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="6" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.7655367">
+              <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
               <folding>
                 <element signature="e#18#27#0" expanded="true" />
               </folding>
@@ -156,11 +90,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.log" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test.log">
+      <file leaf-file-name="constants.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/constants.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.4495413">
-              <caret line="100" column="53" selection-start-line="100" selection-start-column="53" selection-end-line="100" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.log.2" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.log.2">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -170,7 +114,17 @@
         <entry file="file://$PROJECT_DIR$/logger.config">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="errcode.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/errcode.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -190,18 +144,10 @@
         <entry file="file://$PROJECT_DIR$/download_boss.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Crawler_layout.spec" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Crawler_layout.spec">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-              <folding />
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding>
+                <element signature="e#24#34#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -226,7 +172,6 @@
         <option value="$PROJECT_DIR$/template.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/download_link_worker.py" />
-        <option value="$PROJECT_DIR$/logger.config" />
         <option value="$USER_HOME$/.gitignore_global" />
         <option value="$PROJECT_DIR$/global_signal.py" />
         <option value="$PROJECT_DIR$/test.log.1" />
@@ -235,7 +180,6 @@
         <option value="$PROJECT_DIR$/myscript.spec" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Crawler_layout.spec" />
-        <option value="$PROJECT_DIR$/constants.py" />
         <option value="$PROJECT_DIR$/errcode.py" />
         <option value="$PROJECT_DIR$/ParsePage.py" />
         <option value="$PROJECT_DIR$/test.py" />
@@ -243,9 +187,12 @@
         <option value="$PROJECT_DIR$/download_boss.py" />
         <option value="$PROJECT_DIR$/download_worker.py" />
         <option value="$PROJECT_DIR$/download_item_link.py" />
-        <option value="$PROJECT_DIR$/ParseItem.py" />
-        <option value="$PROJECT_DIR$/Crawler_layout.py" />
+        <option value="$PROJECT_DIR$/logger.config" />
         <option value="$PROJECT_DIR$/MainLayout.py" />
+        <option value="$PROJECT_DIR$/Crawler_layout.py" />
+        <option value="$PROJECT_DIR$/test.log" />
+        <option value="$PROJECT_DIR$/constants.py" />
+        <option value="$PROJECT_DIR$/ParseItem.py" />
       </list>
     </option>
   </component>
@@ -305,6 +252,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Problems" />
         <subPane subId="Project Files">
@@ -320,7 +268,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -685,27 +632,27 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16414523" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17776097" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2845912" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21536796" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3529412" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18603411" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.375817" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43954247" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3529412" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Concurrent Activities Diagram" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3181818" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -736,23 +683,15 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="45" />
+      <option name="time" value="49" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/download_worker.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -767,7 +706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -775,7 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1009,20 +946,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/errcode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1034,32 +957,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/download_boss.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.log.2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-110.44343">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/download_item_link.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="26" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1067,17 +964,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="22" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ParseItem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="6" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="6" />
-          <folding>
-            <element signature="e#18#27#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1089,37 +975,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Crawler_layout.py">
+    <entry file="file://$PROJECT_DIR$/logger.config">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/errcode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/download_boss.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="e#24#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/download_item_link.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+          <folding>
+            <element signature="e#24#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/bs4/element.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33152175">
+          <caret line="1157" column="8" selection-start-line="1157" selection-start-column="8" selection-end-line="1157" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MainLayout.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+          <caret line="151" column="39" selection-start-line="151" selection-start-column="39" selection-end-line="151" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logger.config">
+    <entry file="file://$PROJECT_DIR$/test.log.2">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4495413">
-          <caret line="100" column="53" selection-start-line="100" selection-start-column="53" selection-end-line="100" selection-end-column="53" />
+        <state vertical-scroll-proportion="47.88685">
+          <caret line="196" column="35" selection-start-line="196" selection-start-column="35" selection-end-line="196" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler_layout.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="162" column="40" selection-start-line="162" selection-start-column="40" selection-end-line="162" selection-end-column="40" />
+          <folding>
+            <element signature="e#24#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParseItem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7655367">
+          <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
+          <folding>
+            <element signature="e#18#27#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
