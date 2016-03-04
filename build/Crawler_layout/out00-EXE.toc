@@ -6,7 +6,7 @@
  None,
  False,
  False,
- <PyInstaller.utils.win32.winmanifest.Manifest object at 0x04202EF0>,
+ <PyInstaller.utils.win32.winmanifest.Manifest object at 0x045FB390>,
  True,
  'Crawler_layout.pkg',
  [('out00-PYZ.pyz',
@@ -35,7 +35,7 @@
  [],
  None,
  False,
- 1455180074L,
+ 1455962075L,
  [('runw.exe',
    'c:\\python27\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-32bit\\runw.exe',
    'EXECUTABLE')])

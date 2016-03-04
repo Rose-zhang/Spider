@@ -30,6 +30,10 @@ class Item:
         self.url = url
 
     def parse_and_save(self, path, file_path):
+        # hard-code
+        state = '江苏'
+        city = '南京'
+
         # s = requests.session()
         r = requests.get(self.url)
         soup = BeautifulSoup(r.text, "html.parser")
@@ -56,6 +60,8 @@ class Item:
         item_info = [
             title,
             cid,
+            state,
+            city,
             price,
             str(self.__get_item_number()),
             description,
@@ -208,7 +214,9 @@ class Item:
         for content in contents:
             if pattern.match(content.string):
                 str = content.string
-                return str.split(':')[1].replace(' ', '')
+
+                # replace non break space
+                return str.split(':')[1].replace(u'\xa0', '').replace(' ', '')
         return ''
 
     @staticmethod

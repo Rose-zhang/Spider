@@ -27,6 +27,7 @@ class Widget(QtGui.QMainWindow, Ui_Form):
         self.exit.clicked.connect(self.close_event_for_button)
         self.craw_items.clicked.connect(self.download_link)
         self.download_item.clicked.connect(self.download_items)
+        self.delete_item.clicked.connect(self.delete_item_handler)
         self.download_item.setDisabled(True)
         # self.signal_increment_bar.connect(self.increase_progressbar)
         self.progressBar.hide()
@@ -90,10 +91,14 @@ class Widget(QtGui.QMainWindow, Ui_Form):
             self.display_download.setRowCount(len(self.item_info))
 
             for i in range(0, len(self.item_info)):
+                chk_box_item = QtGui.QTableWidgetItem()
+                chk_box_item.setFlags(QtCore.Qt.ItemIsUserCheckable | QtCore.Qt.ItemIsEnabled)
+                chk_box_item.setCheckState(QtCore.Qt.Unchecked)
                 item_url = QtGui.QTableWidgetItem(self.item_info[i]['item_url'])
                 item_name = QtGui.QTableWidgetItem(self.item_info[i]['item_name'])
                 self.display_download.setItem(i, 0, item_url)
                 self.display_download.setItem(i, 1, item_name)
+                self.display_download.setItem(i, 2, chk_box_item)
             # QtGui.QMessageBox.information(self, u'系统消息', u'链接抓取完成', u'确定')
 
             # enable user to download items
@@ -102,6 +107,20 @@ class Widget(QtGui.QMainWindow, Ui_Form):
 
         except Exception, e:
             QtGui.QMessageBox.information(self, u'警告', e.message, u'确定')
+
+    def refresh_table(self):
+        self.progressBar.hide()
+        self.display_download.setRowCount(len(self.item_info))
+
+        for i in range(0, len(self.item_info)):
+            chk_box_item = QtGui.QTableWidgetItem()
+            chk_box_item.setFlags(QtCore.Qt.ItemIsUserCheckable | QtCore.Qt.ItemIsEnabled)
+            chk_box_item.setCheckState(QtCore.Qt.Unchecked)
+            item_url = QtGui.QTableWidgetItem(self.item_info[i]['item_url'])
+            item_name = QtGui.QTableWidgetItem(self.item_info[i]['item_name'])
+            self.display_download.setItem(i, 0, item_url)
+            self.display_download.setItem(i, 1, item_name)
+            self.display_download.setItem(i, 2, chk_box_item)
 
     def download_items(self):
         file_path = QtGui.QFileDialog.getSaveFileName(
@@ -130,6 +149,16 @@ class Widget(QtGui.QMainWindow, Ui_Form):
             self.job.signal_job_completed.connect(self.job_completed_notify)
             self.download_item.setDisabled(True)
             self.job.start()
+
+    def delete_item_handler(self):
+        new_item_info = []
+        for i in range(0, len(self.item_info)):
+            check_box = self.display_download.item(i, 2)
+            # print check_box.checkState()
+            if check_box.checkState() != QtCore.Qt.Checked:
+                new_item_info.append(self.item_info[i])
+        self.item_info = new_item_info
+        self.refresh_table()
 
     def init_progressbar(self, maximum):
         self.progressBar.show()
