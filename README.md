@@ -1,7 +1,8 @@
 # Tequlia
 * Language & Tool
   1. Python 2.7
-  2. pyinstaller
+  2. Pyinstaller (for export)
+  3. QtDesigner (for UI design)
 * Paltform
   * Windows (32/64 compatiable)
 * Introduction
