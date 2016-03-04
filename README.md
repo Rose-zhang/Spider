@@ -11,4 +11,4 @@
   2. This tool targets at people who sells items on Taobao website. With this tool, people no longer need to upload item which is similar to other sellers. All they need to do is make a few of modifications after crawlering.![](pic/1.png)
 * Usage
   1. Use pyinstaller to export .exe program. You will find the .exe file in /dist directory.
-  2. The program finally output file in CSV format, which is supported by [Taobao Assistance](http://zhuli.taobao.com/) (A tool provided by Ali for sellers to upload items)![](pic/3.png)
+  2. The program finally output file in CSV format, which is supported by [Taobao Assistance](http://zhuli.taobao.com/) (A tool provided by Ali for sellers to upload items)![](pic/4.png)![](pic/3.png)
